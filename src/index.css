@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scroll-fade-in {
+    @apply opacity-0 translate-y-8;
+    animation: scrollFadeIn 0.8s ease-out forwards;
+  }
+
+  .scroll-fade-in-delay-1 {
+    animation-delay: 0.1s;
+  }
+
+  .scroll-fade-in-delay-2 {
+    animation-delay: 0.2s;
+  }
+
+  .scroll-fade-in-delay-3 {
+    animation-delay: 0.3s;
+  }
+
+  .scroll-slide-in-left {
+    @apply opacity-0 -translate-x-8;
+    animation: scrollSlideInLeft 0.8s ease-out forwards;
+  }
+
+  .scroll-slide-in-right {
+    @apply opacity-0 translate-x-8;
+    animation: scrollSlideInRight 0.8s ease-out forwards;
+  }
+
+  .scroll-scale-in {
+    @apply opacity-0 scale-95;
+    animation: scrollScaleIn 0.8s ease-out forwards;
+  }
+}
+
+@keyframes scrollFadeIn {
+  to {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+@keyframes scrollSlideInLeft {
+  to {
+    @apply opacity-100 translate-x-0;
+  }
+}
+
+@keyframes scrollSlideInRight {
+  to {
+    @apply opacity-100 translate-x-0;
+  }
+}
+
+@keyframes scrollScaleIn {
+  to {
+    @apply opacity-100 scale-100;
+  }
+}
